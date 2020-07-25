@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log('Link 1 attributes :')
+            console.log('\t'+$('#link_1').attr('id'))
+            console.log('\t'+$('#link_1').attr('href'))
+            
+            console.log('Link 2 attributes :')
+            console.log('\t'+$('#link_2').attr('id'))
+            console.log('\t'+$('#link_2').attr('href'))
+            
+            console.log('Link 3 attributes :')
+            console.log('\t'+$('#link_3').attr('id'))
+            console.log('\t'+$('#link_3').attr('href'))
+            
+            console.log('Link 4 attributes :')
+            console.log('\t'+$('#link_4').attr('id'))
+            console.log('\t'+$('#link_4').attr('href'))
+
+            console.log('Link 5 attributes :')
+            console.log('\t'+$('#link_5').attr('id'))
+            console.log('\t'+$('#link_5').attr('href'))
+
+            $('#btn_id').click(function(){
+                $('#link_1').attr('id', 'new_id_1').attr('href', 'http://subhobasak.pythonanywhere.com/')
+                $('#link_2').attr('id', 'new_id_2').attr('href', 'http://subhobasak.pythonanywhere.com/')
+                $('#link_3').attr('id', 'new_id_3').attr('href', 'http://subhobasak.pythonanywhere.com/')
+                $('#link_4').attr('id', 'new_id_4').attr('href', 'http://subhobasak.pythonanywhere.com/')
+                $('#link_5').attr('id', 'new_id_5').attr('href', 'http://subhobasak.pythonanywhere.com/')
+
+                console.log('Link 1 attributes :')
+                console.log('\t'+$('#link_1').attr('id'))
+                console.log('\t'+$('#link_1').attr('href'))
+                
+                console.log('Link 2 attributes :')
+                console.log('\t'+$('#link_2').attr('id'))
+                console.log('\t'+$('#link_2').attr('href'))
+                
+                console.log('Link 3 attributes :')
+                console.log('\t'+$('#link_3').attr('id'))
+                console.log('\t'+$('#link_3').attr('href'))
+                
+                console.log('Link 4 attributes :')
+                console.log('\t'+$('#link_4').attr('id'))
+                console.log('\t'+$('#link_4').attr('href'))
+
+                console.log('Link 5 attributes :')
+                console.log('\t'+$('#link_5').attr('id'))
+                console.log('\t'+$('#link_5').attr('href'))
+            })
+        })
+    </script>
+</head>
+<body>
+    <a id="link_1" href="https://google.com">Google</a>
+    <br>
+    <a id="link_2" href="https://facebook.com">Facebook</a>
+    <br>
+    <a id="link_3" href="https://amazon.in">Amazon</a>
+    <br>
+    <a id="link_4" href="https://youtube.com">Youtube</a>
+    <br>
+    <a id="link_5" href="https://duckduckgo.com">Duck duck go</a>
+    <br>
+    <button id="btn_id">Change links</button>
+</body>
+</html>

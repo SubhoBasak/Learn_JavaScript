@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#load_btn').click(function(){
+                $('#box_1').fadeIn(500);
+                $('#box_2').fadeIn(1000);
+                $('#box_3').fadeIn(1500);
+                $('#load_btn').fadeOut(2000);
+                $('#unload_btn').fadeIn(2500);
+            })
+
+            $('#unload_btn').click(function(){
+                $('#box_1').fadeOut(1500);
+                $('#box_2').fadeOut(1000);
+                $('#box_3').fadeOut(500);
+                $('#load_btn').fadeIn(2500);
+                $('#unload_btn').fadeOut(2000);
+            })
+        })
+    </script>
+
+    <style>
+        .sq_box {
+            width: 100px;
+            height: 100px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <button id="load_btn" onclick="fade_in_load">Load boxes</button>
+        <button id="unload_btn" onclick="fade_in_load" style="display: none;">Unload boxes</button>
+        <br>
+        <br>
+        <div id="box_1" class="sq_box" style="background: red;"></div>
+        <br>
+        <div id="box_2" class="sq_box" style="background: green;"></div>
+        <br>
+        <div id="box_3" class="sq_box" style="background: blue;"></div>
+        <br>
+        <hr>
+        <h5>Subho Basak</h5>
+    </center>
+</body>
+</html>

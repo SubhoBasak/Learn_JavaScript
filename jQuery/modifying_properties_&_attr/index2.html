@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function(){
+            $('#btn_id').click(function(){
+                $('#img_1').attr('src', './images/img (3).jfif').attr('alt', 'img_3').attr('width', '300px').attr('height', '200px')
+                $('#img_2').attr('src', './images/img (4).jfif').attr('alt', 'img_4').attr('width', '300px').attr('height', '200px')
+            })
+        })
+    </script>
+</head>
+<body>
+    <img id="img_1" src="./images/img (1).jfif" alt="img_1" width="200px" height="150px">
+    <img id="img_2" src="./images/img (2).jfif" alt="img_1" width="200px" height="150px">
+    <br>
+    <button id='btn_id'>Change Images</button>
+</body>
+</html>

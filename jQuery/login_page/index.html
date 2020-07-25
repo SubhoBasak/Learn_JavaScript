@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#login_btn").click(function(){
+                let uname = $('#username_id').val().toLowerCase()
+                let pswrd = $('#password_id').val()
+
+                if(uname == 'subho' && pswrd == '12345'){
+                    $('#login_section').text('You are logged in :)').css('display', 'block').css('color', 'green').css('font-size', '25px')
+                    $('#username_section').text('').css('display', 'none')
+                    $('#password_section').text('').css('display', 'none')
+                }
+                else{
+                    $('#login_section').text('Incorrect login details !').css('display', 'block').css('color', 'red').css('font-size', '25px')
+                    if(uname == ''){
+                        $('#username_section').text('Username can\'t be empty').css('display', 'block').css('color', 'orange')
+                    }
+                    else if(uname != 'subho'){
+                        $('#username_section').text('Username does not exist').css('display', 'block').css('color', 'red')
+                    }
+                    if(pswrd == ''){
+                        $('#password_section').text('Password can\'t be empty').css('display', 'block').css('color', 'orange')
+                    }
+                    else if(pswrd != '12345'){
+                        $('#password_section').text('Password does not match').css('display', 'block').css('color', 'red')
+                    }
+                }
+            })
+        })
+    </script>
+  </head>
+  <body>
+    <h4>Login</h4>
+    <p id="login_section" style="display: none;"></p>
+    <div style="display: block;">
+        <p id="username_section" style="display: none;"></p>
+        <label for="username_id">Username</label>
+        <input id="username_id" type="text" placeholder="Username" autocomplete="username">
+    </div>
+    <br>
+    <div style="display: block;">
+        <p id="password_section" style="display: none;"></p>
+        <label for="password_id">Password</label>
+        <input id="password_id" type="password" placeholder="Password" autocomplete="current-password">
+    </div>
+    <br>
+    <input id="login_btn" type="submit" value="Login" onclick="">
+  </body>
+</html>

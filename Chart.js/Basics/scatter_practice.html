@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+        let data_points1 = []
+        let data_points2 = []
+        let data_points3 = []
+
+        for(i = 0; i < 100; i++){
+            data_points1.push({x: Math.random()*5, y: Math.random()*-3})
+            data_points2.push({x: Math.random()*0.1, y: Math.random()})
+            data_points3.push({x: Math.random()*2, y: Math.random()})
+        }
+
+        let myCanvas = document.getElementById('myCanvas').getContext('2d');
+        let scatterPlot = new Chart(myCanvas, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Random Points 1',
+                    data: data_points1,
+                    backgroundColor: 'blue'
+                },{
+                    label: 'Random Points 2',
+                    data: data_points2,
+                    backgroundColor: 'red'
+                },{
+                    label: 'Random Points 3',
+                    data: data_points3,
+                    backgroundColor: 'green'
+                }],
+            },
+            options: {
+                title: {
+                    display: true,
+                    fontSize: 25,
+                    fontColor: 'orange',
+                    text: 'Random Points Scatter Plot'
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            },
+            ticks: {
+                min: 1,
+                max: 5,
+            }
+        })
+    </script>
+</body>
+</html>

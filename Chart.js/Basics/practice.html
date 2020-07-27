@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <script type="text/javascript" language="javascript">
+        let myCanvas = document.getElementById("myCanvas").getContext('2d');
+        let randPlot = new Chart(myCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['lbl 1', 'lbl 2', 'lbl 3', 'lbl 4', 'lbl 5', 'lbl 6', 'lbl 7'],
+                datasets: [{
+                    label: 'val 1',
+                    data: [1, 2, 3, 4, 3, 2, 1],
+                    backgroundColor: 'steelblue',
+                }]
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <script>
+        let myCanvas = document.getElementById("myCanvas").getContext("2d")
+        let randPlot = new Chart(myCanvas, {
+            type: 'bar',
+            data:{
+                labels: ['col a', 'col b', 'col c', 'col d', 'col e', 'col f', 'col g'],
+                datasets: [{
+                    label: 'val a',
+                    data: [22, 89, 34, 63, 38, 68, 55],
+                    backgroundColor: ['#ed6b6b', '#e88964', '#d9e864', '#72e665', '#66e8d9', '#6266e3', '#a05dde'],
+                    borderWidth: 1,
+                    borderColor: '#222',
+                    hoverBorderColor: '#000',
+                    hoverBorderWidth: 2,
+                }]
+            },
+            options:{
+                title:{
+                    display: true,
+                    text: 'Random value plot with javascript',
+                    fontSize: 22,
+                    fontColor: 'orange',
+                },
+                legend:{
+                    position: 'bottom',
+                },
+                tooltips:{
+                    enabled: true,
+                }
+            }
+        })
+    </script>
+</body>
+</html>

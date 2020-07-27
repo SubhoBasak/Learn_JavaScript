@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chart.js chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        let massPopChart = new Chart(myChart, {
+            type: 'bar', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['class a', 'class b', 'class c', 'class d', 'class e', 'class f', 'class f'],
+                datasets: [{
+                    label: 'value a',
+                    data: [0.123, 0.323, 0.63, 0.325, 0.642, 0.423, 0.2343],
+                    // backgroundColor: 'green',
+                    backgroundColor: ['red', 'yellow', 'blue', 'green', 'orange', 'pink', 'magenta'],
+                    borderWidth: 2,
+                    borderColor: '#222',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: 'brown'
+                },
+                {
+                    label: 'value b',
+                    data: [0.1, 0.26, 0.5, 1.2, 0.7, 0.44, 0.8],
+                    backgroundColor: ['pink', 'blue', 'orange', 'brown', 'yellow', 'red', 'green'],
+                    borderWidth: 3,
+                    borderColor: 'gold',
+                    hoverBorderColor: 'black',
+                    hoverBorderWidth: 2,
+                }],
+            },
+            options: {
+                title:{
+                    display: true,
+                    text: 'Graph plotting in JavaScript',
+                    fontSize: 12
+                },
+                legend:{
+                    // display: false,
+                    position: 'right',
+                    labels:{
+                        fontColor: 'blue'
+                    }
+                },
+                layout:{
+                    padding:{
+                        left:60,
+                        right:50,
+                        bottom:0,
+                        top:50,
+                    }
+                },
+                tooltips:{
+                    enabled: true,
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        let myCanvas = document.getElementById('myCanvas').getContext('2d');
+        let scatterPlot = new Chart(myCanvas, {
+            type: 'scatter',
+            data:{
+                datasets: [{
+                    label: 'Scatter points',
+                    data: [{
+                        x: 0,
+                        y: 1
+                    }, {
+                        x: 2,
+                        y: 6
+                    }, {
+                        x: -4,
+                        y: 0
+                    }],
+                    backgroundColor: 'red'
+                }],
+            }
+        })
+    </script>
+</body>
+</html>
